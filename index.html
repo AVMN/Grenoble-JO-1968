@@ -1,60 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <title>Bienvenue chez Shuss</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/png" href="images/fav.png" />
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="images/fav.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
 
-	<div id="intention">
-		<img class="logocenter" src="images/logoFull.png"/>
-		<h1 class="center">Grenoble 1968 : Les Jeux Olympiques qui ont changés l'Isère</h1>
-		<div class="txtIntro"><br/><br/>
-			<p>Les étudiants du Master 2 AVMN 2019-2020 vous proposent un webdocumentaire sur les J.O d'hiver de 1968 à Grenoble. La réalisation numérique que vous êtes sur le point de consulter se base sur des archives, des témoignages et divers éléments relatifs à cet événement. À partir de ces sources, un travail créatif a été réalisé par les étudiants, ce processus passe notamment par une appropriation et une réinterprétation libre des histoires et souvenirs de cette époque.</p>
-		</div>
+<div id="intention">
+    <img class="logocenter" src="images/logoFull.png"/>
+    <h1 class="center">Grenoble 1968 : Les Jeux Olympiques qui ont changé l'Isère</h1>
+    <div class="txtIntro"><br/><br/>
+        <p>Les étudiants du Master 2 AVMN 2019-2020 vous proposent un webdocumentaire sur les J.O. d'hiver de 1968 à Grenoble en partenariat avec le musée dauphinois de Grenoble et le COLJOG (Conservatoire, Observatoire et Laboratoire des Jeux Olympiques de Grenoble) . La réalisation numérique que vous êtes sur le point de consulter se base sur des archives, des témoignages et divers éléments relatifs à cet événement. À
+            partir de ces sources, un travail créatif a été réalisé par les étudiants, ce processus passe notamment par une appropriation et une réinterprétation libre des histoires et souvenirs de cette époque.</p>
+    </div>
 
-		<!-- SUITE -->
-		<input class="btn btn-commencer btn-primary center" type="button" OnClick="$('#test').show().removeClass('hidden').addClass('animated fadeIn');$('#intention').addClass('hidden');" value="Commencer"/>
-	</div>
-
-
-	<div id="test" class="hidden">
-		<!-- VIDEO -->
-		
-		<video class="film" width="100%" height="auto" controls>
-			<source src="videos/introduction.mp4" type="video/mp4">
-		</video>
-
-		<!-- SUITE -->
-		<button type="button" class="btn btn-primary center" OnClick="window.location.href='chalet.html'"/>Continuer</button>
-	</div>
+    <!-- SUITE -->
+    <input class="btn btn-commencer btn-primary center" type="button" OnClick="$('#test').show().removeClass('hidden').addClass('animated fadeIn');$('#intention').addClass('hidden');" value="Commencer"/>
+</div>
 
 
+<div id="test" class="hidden">
+    <!-- VIDEO -->
 
-	<!-- SCRIPTS -->
-	<script>
-    
+    <video class="film" width="100%" height="auto" controls>
+        <source src="videos/introduction.mp4" type="video/mp4">
+    </video>
+
+    <!-- SUITE -->
+    <button type="button" class="btn btn-primary center" OnClick="window.location.href='chalet.html'"/>
+    Continuer</button>
+</div>
+
+
+<!-- SCRIPTS -->
+<script>
+
     jQuery(document).ready(function ($) {
-    	$('#test').hide();
+        $('#test').hide();
 
-    	$('.btn-commencer').click(function () {
-        $('#intention').addClass('animated fadeOut');
-        $('#test').show().removeClass('hidden').addClass('animated fadeIn');
-	    }
-	});
+        $('.btn-commencer').click(function () {
+            $('#intention').addClass('animated fadeOut');
+            $('#test').show().removeClass('hidden').addClass('animated fadeIn');
+        }
+    });
 
-	</script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/browser.min.js"></script>
-	<script src="js/breakpoints.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/chalet.js"></script>
-	<script src="js/classie.js"></script>
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chalet.js"></script>
+<script src="js/classie.js"></script>
 </body>
 </html>
