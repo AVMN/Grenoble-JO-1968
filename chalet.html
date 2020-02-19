@@ -1,264 +1,284 @@
 <!DOCTYPE HTML>
 
-<html>
-	<head>
-		<title>La Maison de Shuss</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" type="image/png" href="images/fav.png" />
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/style-chalet.css" />
-		<script src="js/modernizr.custom.js"></script>
+<html lang="fr">
+<head>
+    <title>La Maison de Shuss</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="icon" type="image/png" href="images/fav.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/style-chalet.css"/>
+    <script src="js/modernizr.custom.js"></script>
 
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<!-- MENU -->
-		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-			<img id="hideLeft" src="images/retour.png"/>
-			<br/>
-			<div class="lienmenu">
-				<a href="clefs.html">Le temps d'un souvenir</a>
-				<a href="expo.html">Une visite pour retracer les Jeux</a>
-				<a href="carte.html">Carte olympique temporelle</a>
-				<a href="http://icm.pixeliz.odns.fr/avmn/jo/champion.html">L'âme d'un champion</a>
-				<a href="dieux.html">Au nom des Dieux</a>
-				<a href="enquete.html">En quête d'archives</a>
-			</div>
+<!-- MENU -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <img id="hideLeft" src="images/retour.png"/>
+    <br/>
+    <div class="lienmenu">
+        <a href="clefs.html">Le temps d'un souvenir</a>
+        <a href="expo.html">Une visite pour retracer les Jeux</a>
+        <a href="carte.html">Carte olympique temporelle</a>
+        <a href="http://icm.pixeliz.odns.fr/avmn/jo/champion.html">L'âme d'un champion</a>
+        <a href="dieux.html">Au nom des Dieux</a>
+        <a href="enquete.html">En quête d'archives</a>
+    </div>
 
-			<div class="bot">
-				<a href="credits.html">Crédits</a>
-			</div>
-		</nav>
+    <div class="bot">
+        <a href="credits.html">Crédits</a>
+    </div>
+</nav>
 
-		<!-- BOUTON BURGER -->
-		<div class="main">
-			<section>
-				<img id="showLeft" src="images/burger.png"/>
-			</section>
-		</div>
+<!-- BOUTON BURGER -->
+<div class="main">
+    <section>
+        <img id="showLeft" src="images/burger.png"/>
+    </section>
+</div>
 
-		<!-- MODALE D'AIDE -->
-		<div class="help">
-			<a href="#" data-target='#help' data-toggle="modal">
-				<img src="images/aide.png"/>
-			</a>
-		</div>
+<!-- MODALE D'AIDE -->
+<div class="help">
+    <a href="#" data-target='#help' data-toggle="modal">
+        <img src="images/aide.png"/>
+    </a>
+</div>
 
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="help">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">Tutoriel</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="help">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Tutoriel</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
-					<div class="modal-body">
-						<video width="450" height="auto" controls>
-							<source src="videos/tuto.mp4" type="video/mp4">
-						</video>
-					</div>
+            <div class="modal-body">
+                <video width="450" height="auto" controls>
+                    <source src="videos/tuto.mp4" type="video/mp4">
+                </video>
+            </div>
 
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Retour</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Retour</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-		<!-- DIV CLIQUABLES -->
-	 	<div class="">
-			<div id="wrapper">
+<!-- DIV CLIQUABLES -->
+<div class="">
+    <div id="wrapper">
 
-				<img src="images/maisonshuss.jpg" class="fond">
-				<img src="images/ok.gif"  class="fond">
-
-
-					<a href="#" data-target='#clefs' data-toggle="modal"><div class="cont1 btn" data-id=""></div></a>
-
-					<a href="#" data-target='#affiche' data-toggle="modal"><div class="cont2 btn" data-id=""></div></a>
-
-					<a href="#" data-target='#carte' data-toggle="modal"><div class="cont3 btn" data-id=""></div></a>
-
-					<a href="#" data-target='#medaille' data-toggle="modal"><div class="cont4 btn" data-id=""></div></a>
-
-					<a href="#" data-target='#porte' data-toggle="modal"><div class="cont5 btn" data-id=""></div></a>
-
-					<a href="#" data-target='#tv' data-toggle="modal"><div class="cont6 btn" data-id=""></div></a>
-
-			</div>
-	 	</div> 
-
-		<!-- Modales -->
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="clefs">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">Le temps d'un souvenir</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<img src="images/mini_clefs.png" class="imgmod"/>
-						<p class="typroj">Film de fiction</p><br/>
-						<p>Colette, 68 ans, rencontre Maxime, étudiant à Grenoble dans un covoiturage. Au cours d’une discussion, Maxime apprend l’existence des JO à Grenoble en 68, et le métier de Colette, secrétaire du COJO à cette époque. Elle commence à lui raconter son expérience. Dans une ambiance nostalgique, Colette lui livre tous ces souvenirs et anecdotes à propos de la flamme des JO et de son arrivée à Grenoble.</p>	
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" OnClick="window.location.href='clefs.html'" />Voir le film</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="affiche">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">Une visite pour retracer les Jeux de Grenoble</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<img src="images/mini_expo.png" class="imgmod"/>
-						<p class="typroj">Film en 360°</p><br/>
-						<p>Le Musée Dauphinois a célébré le 50ème anniversaire des Jeux de 1968 à travers une exposition “Grenoble 1968 - Les Jeux Olympiques qui ont changé l’Isère”. Cette installation relatait l’histoire de ces Jeux depuis la candidature de la ville, jusqu’aux épreuves en passant par la transformation de Grenoble et le contexte géopolitique de l’époque. À travers cette visite, vous trouverez une sauvegarde immersive et enrichie de cette exposition par une vidéo 360°. 
-
-						Pour vous déplacer dans la vidéo maintenez le clic gauche enfoncé pour regarder autour de vous avec la souris.
-						</p>	
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" OnClick="window.location.href='expo.html'" />Voir l'exposition</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="carte">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">Carte olympique temporelle</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<img src="images/mini_carte.png" class="imgmod"/>
-						<p class="typroj">Carte intéractive</p><br/>
-						<p>La carte olympique temporelle vous permet de voyager à travers l’espace et le temps. Partez à la découverte des lieux emblématiques de notre patrimoine sportif grenoblois de 1968. Redécouvrez-les aujourd’hui, à travers quatre bâtiments isérois photographiés à l’époque et de nos jours. Les différents équipements des jeux sont référencés sur cette carte interactive. Quelques surprises vous attendent : des souvenirs du passé jusqu’aux routes vers le futur, laissez-vous tenter par l’aventure. C’est parti ! 
-						</p>	
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" OnClick="window.location.href='carte.html'" />Voir la carte</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="medaille">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">L’âme d’un champion</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<img src="images/mini_champion.png" class="imgmod"/>
-						<p class="typroj">Jeu</p><br/>
-						<p>Avez-vous l’âme d’un champion ? Concourez contre les plus grands athlètes des Jeux de Grenoble et tentez de remporter une médaille ! <br/>
-						Les champions des Jeux de Grenoble ont réalisé des prouesses inégalées à cette époque et marqué l’histoire du sport. Comment leur discipline a-t-elle évolué ? Leurs exploits ont-ils été dépassées depuis ? Qui étaient-ils ? À quel âge sont-ils devenus médaillés olympiques ? Jouez et découvrez-le en remportant les mêmes médailles que les hommes et les femmes qui ont défilé devant les caméras de Grenoble.
-
-						</p>	
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" OnClick="window.location.href='http://icm.pixeliz.odns.fr/avmn/jo/champion.html'" />Jouer</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="porte">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">Au nom des Dieux</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<img src="images/mini_dieux.png" class="imgmod"/>
-						<p class="typroj">Documentaire de création</p><br/>
-						<p>Plus qu’un événement sportif de haut niveau, les Jeux Olympiques entraînent un véritable développement sociétal, aussi bien en terme d’urbanisme que de développement social dans les villes où ils sont organisés. 
-						<br/>En reprenant l’origine de cet événement sportif, en nous arrêtant sur les Jeux de Grenoble de 1968, nous mettrons en perspective l’organisation des Jeux avec le choix de la ville organisatrice, la construction des infrastructures, la diffusion des épreuves et les sponsors de l'événement.</p>	
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" OnClick="window.location.href='dieux.html'" />Voir le film</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="tv">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title">En quête d'archives</h2>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-					<div class="modal-body">
-						<img src="images/mini_tremplin.png" class="imgmod"/>
-						<p class="typroj">Série documentaire</p><br/>
-						<p>Que sont devenus les bâtiments et infrastructures construits à l’occasion des Jeux Olympique de 1968 ? Vestiges d’un événement qui a transformé la ville, certains ont dû s’adapter, se transformer ou se diversifier dans leurs usages. Offrez vous un voyage de 1968 à nos jours. Venez découvrir, ou redécouvrir, des lieux emblématiques comme l’Anneau de Vitesse, le Tremplin de Saint Nizier, ou encore le Palais des Glaces (actuel Palais des Sports).</p>
-	
-					</div>
-
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" OnClick="window.location.href='enquete.html'" />Voir la série documentaire</button>
-					</div>
-				</div>
-			</div>
-		</div>
+        <img src="images/maisonshuss.jpg" class="fond">
+        <img src="images/ok.gif" class="fond">
 
 
+        <a href="#" data-target='#clefs' data-toggle="modal">
+            <div class="cont1 btn" data-id=""></div>
+        </a>
 
-	<!-- Scripts -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/browser.min.js"></script>
-		<script src="js/breakpoints.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script>
-		<script src="js/chalet.js"></script>
-		<script src="js/classie.js"></script>
-		<script>
-		   $( document ).ready(function(){
-		      $(".loader").fadeOut("1000");
-		   });
-		</script>
+        <a href="#" data-target='#affiche' data-toggle="modal">
+            <div class="cont2 btn" data-id=""></div>
+        </a>
 
-	</body>
+        <a href="#" data-target='#carte' data-toggle="modal">
+            <div class="cont3 btn" data-id=""></div>
+        </a>
+
+        <a href="#" data-target='#medaille' data-toggle="modal">
+            <div class="cont4 btn" data-id=""></div>
+        </a>
+
+        <a href="#" data-target='#porte' data-toggle="modal">
+            <div class="cont5 btn" data-id=""></div>
+        </a>
+
+        <a href="#" data-target='#tv' data-toggle="modal">
+            <div class="cont6 btn" data-id=""></div>
+        </a>
+
+    </div>
+</div>
+
+<!-- Modales -->
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="clefs">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Le temps d'un souvenir</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <img src="images/mini_clefs.png" class="imgmod"/>
+                <p class="typroj">Film de fiction</p><br/>
+                <p>Colette, 68 ans, rencontre Maxime, étudiant à Grenoble dans un covoiturage. Au cours d’une discussion, Maxime apprend l’existence des JO à Grenoble en 68, et le métier de Colette, secrétaire du COJO à cette époque. Elle commence à lui raconter son expérience.
+                    Dans une ambiance nostalgique, Colette lui livre tous ses souvenirs et anecdotes à propos de la flamme des JO et de son arrivée à Grenoble.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" OnClick="window.location.href='clefs.html'"/>
+                Voir le film</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="affiche">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Une visite pour retracer les Jeux de Grenoble</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <img src="images/mini_expo.png" class="imgmod"/>
+                <p class="typroj">Film en 360°</p><br/>
+                <p>Le Musée Dauphinois a célébré le 50ème anniversaire des Jeux de 1968 à travers une exposition “Grenoble 1968 - Les Jeux Olympiques qui ont changé l’Isère”. Cette installation relatait l’histoire de ces Jeux depuis la candidature de la ville, jusqu’aux épreuves
+                    en passant par la transformation de Grenoble et le contexte géopolitique de l’époque. À travers cette visite, vous trouverez une sauvegarde immersive et enrichie de cette exposition par une vidéo 360°.
+                    <br>Pour vous déplacer dans la vidéo maintenez le clic gauche enfoncé pour regarder autour de vous avec la souris.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" OnClick="window.location.href='expo.html'"/>
+                Voir l'exposition</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="carte">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Carte olympique temporelle</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <img src="images/mini_carte.png" class="imgmod"/>
+                <p class="typroj">Carte interactive</p><br/>
+                <p>La carte olympique temporelle vous permet de voyager à travers l’espace et le temps. Partez à la découverte des lieux emblématiques de notre patrimoine sportif grenoblois de 1968. Redécouvrez-les aujourd’hui, à travers quatre bâtiments isérois photographiés à
+                    l’époque et de nos jours. Les différents équipements des jeux sont référencés sur cette carte interactive. Quelques surprises vous attendent : des souvenirs du passé jusqu’aux routes vers le futur, laissez-vous tenter par l’aventure. C’est parti !
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" OnClick="window.location.href='carte.html'"/>
+                Voir la carte</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="medaille">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">L’âme d’un champion</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <img src="images/mini_champion.png" class="imgmod"/>
+                <p class="typroj">Jeu</p><br/>
+                <p>Avez-vous l’âme d’un champion ? Concourez contre les plus grands athlètes des Jeux de Grenoble et tentez de remporter une médaille ! <br/>
+                    Les champions des Jeux de Grenoble ont réalisé des prouesses inégalées à cette époque et marqué l’histoire du sport. Comment leur discipline a-t-elle évolué ? Leurs exploits ont-ils été dépassées depuis ? Qui étaient-ils ? À quel âge sont-ils devenus médaillés
+                    olympiques ? Jouez et découvrez-le en remportant les mêmes médailles que les hommes et les femmes qui ont défilé devant les caméras de Grenoble.
+
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" OnClick="window.location.href='http://icm.pixeliz.odns.fr/avmn/jo/champion.html'"/>
+                Jouer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="porte">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Au nom des Dieux</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <img src="images/mini_dieux.png" class="imgmod"/>
+                <p class="typroj">Documentaire de création</p><br/>
+                <p>Plus qu’un événement sportif de haut niveau, les Jeux Olympiques entraînent un véritable développement sociétal, aussi bien en terme d’urbanisme que de développement social dans les villes où ils sont organisés.
+                    <br/>En reprenant l’origine de cet événement sportif, en nous arrêtant sur les Jeux de Grenoble de 1968, nous mettrons en perspective l’organisation des Jeux avec le choix de la ville organisatrice, la construction des infrastructures, la diffusion des
+                    épreuves et les sponsors de l'événement.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" OnClick="window.location.href='dieux.html'"/>
+                Voir le film</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="tv">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">En quête d'archives</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <img src="images/mini_tremplin.png" class="imgmod"/>
+                <p class="typroj">Série documentaire</p><br/>
+                <p>Que sont devenus les bâtiments et infrastructures construits à l’occasion des Jeux Olympique de 1968 ? Vestiges d’un événement qui a transformé la ville, certains ont dû s’adapter, se transformer ou se diversifier dans leurs usages. Offrez vous un voyage de
+                    1968 à nos jours. Venez découvrir, ou redécouvrir, des lieux emblématiques comme l’Anneau de Vitesse, le Tremplin de Saint Nizier, ou encore le Palais des Glaces (actuel Palais des Sports).</p>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" OnClick="window.location.href='enquete.html'"/>
+                Voir la série documentaire</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chalet.js"></script>
+<script src="js/classie.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".loader").fadeOut("1000");
+    });
+</script>
+
+</body>
 </html>
