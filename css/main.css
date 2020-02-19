@@ -1,0 +1,260 @@
+/* GENERAL */
+
+
+@font-face {
+
+	font-family: 'scratch_x_avmn';
+	src: url('../fonts/scratchxavmn-webfont.woff2') format('woff2'),
+	url('../fonts/scratchxavmn-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+
+	font-family: 'ebrima';
+	src: url('../fonts/ebrima.ttf') format('ttf'),
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+h1, h2, h3 {
+	font-family: 'scratch_x_avmn' !important;
+}
+
+h2 {
+	font-size: 18pt !important;
+}
+
+body {
+	display: block;
+	font-family: 'Ebrima';
+	background-color: #fff;
+}
+
+.center {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.logocenter {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-bottom:50px;
+}
+
+/*MENU*/
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.menu > header nav a:hover:before {
+	color: #fff;
+}
+
+#showLeft:hover, #hideLeft:hover {
+	cursor: pointer;
+}
+
+.cbp-spmenu {
+	background: #fff;
+	position: fixed;
+	padding: 1%;
+}
+
+.cbp-spmenu a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+}
+
+.cbp-spmenu a:hover {
+	background: #eee;
+}
+
+.cbp-spmenu a:active {
+	background: #eee;
+	color: #333;
+}
+
+.cbp-spmenu-vertical {
+	width: 280px;
+	height: 100%;
+	top: 0;
+	z-index: 5;
+}
+
+.cbp-spmenu-vertical a {
+	padding: 0.5em;
+}
+
+.cbp-spmenu-left {
+	left: -280px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.lienmenu {
+	margin-top:50px;
+}
+
+/* Transitions */
+
+.cbp-spmenu {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+}
+
+.main {
+	position: absolute;
+	top:0;
+	margin:1%;
+	z-index: 4;
+}
+
+#hideleft {
+	padding-bottom:2em;
+}
+
+.bot {
+	position:absolute;
+	bottom: 0;
+}
+
+.bot a {
+	padding: 0.5em;
+}
+
+/* PAGE VIDEO */
+.film {
+	display: block;
+	margin-top:5%;
+	margin-left:20%;
+	width:1000px;
+	height:562.5px;
+}
+
+.player {/*
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;*/
+}
+
+.help {
+	position: absolute;
+	bottom: 0;
+	margin:1%;
+	z-index: 4;
+}
+
+.btn {
+	margin-top:20px;
+}
+
+.imgmod {
+	width: 470px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+/*VIDEO RESPONSIVE*/
+.videoWrapper {
+	position: relative;
+	margin: 5%;
+	max-width: 1080px;
+	min-height: 50vh;
+	height: 0;
+}
+
+.videoWrapper iframe, .videoWrapper video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.fermer {
+	min-height: 25px;
+	width: auto;
+	margin-right: 20px;
+}
+
+.close {
+	font-size: 40px;
+}
+
+.hidden {
+	display: none;
+}
+
+#intention {
+	text-align: center;
+	margin: 10% 30% 20% 30%;
+}
+
+.modal-body p {
+	text-align: justify;
+	line-height: 120%;
+}
+
+.typroj {
+	color: #274d94;
+
+}
+
+.credits {
+	margin: 10% 30% 20% 30%;
+}

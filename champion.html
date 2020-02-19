@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mini-jeu sur les JO</title>
+
+        <!-- CSS-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/style-champion.css">
+
+        <!-- JS -->
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+
+<!-- MIEUX A CHARGER MAIS MET DU TEMPS À CACHER LES DIVS MOCHES -->
+        <!-- <script  src="js/jquery-3.4.1.min.js" type="text/javascript"></script> -->
+        <script  src="js/champion.js" type="text/javascript"></script>
+
+    </head>
+
+    <body>
+
+
+        <div class="boiboite">
+
+
+
+<div class="barre_noire_haut"></div>
+
+            <div id="accueil" class="etape">
+
+                <div class="contenu">
+
+                    <div class="titre"><h1>Accueil et texte explicatif</h1></div>
+
+                    <div class="paragraphe">Ici viendra le paragraphe introduisant au contenu du mini-jeu</div>
+
+                </div>
+
+                <input class="btn-accueil bouton-milieu" type="button" value="Jouer">
+
+            </div>
+
+
+
+
+            
+            <div id="premiereQuestion" class="etape">
+
+                <input class="btn-q1-retour bouton-gauche" type="image" src="images/champion_img/fleche_blanche_gauche.png">
+
+                <div class="contenu">
+
+                    <div class="titre"><h1>Première question (âge et genre)</h1></div>
+
+                    <div class="paragraphe"><a>Premier texte de la question</a></div>
+
+                    <div class="formReponse"></div>
+
+                </div>
+
+                <input class="btn-q1-suivant bouton-droite" type="image" src="images/champion_img/fleche_blanche_droite.png">
+
+            </div>
+
+
+
+
+            <div id="premiereReponse" class="etape">
+
+                <input class="btn-r1-retour bouton-gauche" type="image" src="images/champion_img/fleche_blanche_gauche.png">
+
+                <div class="contenu">
+
+                    <div class="titre"><h1>Première réponse</h1></div>
+
+                    <div class="paragraphe"><a>Premier texte de la réponse</a></div>
+
+                    <div class="formReponse1">
+
+                        <form class="formGenre" action="/action_page.php">
+
+                            <div class="item_genre">
+                                <input type="radio" id="genreHomme" name="genre" value="Homme">
+                                <label id="genre_homme_label" class="labelGenre" for="genreHomme"></label>
+                                <a>Homme</a>
+                            </div>
+
+                            <div class="item_genre">
+                                <input type="radio" id="genreFemme" name="genre" value="Femme">
+                                <label id="genre_femme_label" class="labelGenre" for="genreFemme"></label>
+                                <a>Femme</a>
+                            </div>
+
+                        </form>
+
+                        <form class="formAge" action="/action_page.php">
+
+                            <label for="age">Entrez votre âge ici</label>
+                            <input type="number" id="age" name="age" max="99" min="1" >
+                            
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <input class="btn-r1-suivant bouton-droite" type="image" src="images/champion_img/fleche_blanche_droite.png">
+
+            </div>
+
+
+
+
+            <div id="deuxiemeQuestion" class="etape">
+
+                <input class="btn-q2-retour bouton-gauche" type="image" src="images/champion_img/fleche_blanche_gauche.png">
+
+                <div class="contenu">
+                    <div class="titre"><h1>Deuxième question (disciplines)</h1></div>
+
+                    <div class="paragraphe"><a>Deuxième texte de la question</a></div>
+
+
+                </div>
+
+                <input class="btn-q2-suivant bouton-droite" type="image" src="images/champion_img/fleche_blanche_droite.png">
+
+            </div>
+
+
+
+
+            <div id="deuxiemeReponse" class="etape">
+
+                <input class="btn-r2-retour bouton-gauche" type="image" src="images/champion_img/fleche_blanche_gauche.png">
+
+                <div class="contenu">
+
+                    <div class="titre"><h1>Deuxième réponse</h1></div>
+
+                    <div class="paragraphe"><a>Deuxième texte de la réponse</a></div>
+
+                    <div class="formReponse2">
+
+                        <div class="sports">
+                            
+                            <div class="discipline">
+                                <input type="image" class="btn-discipline btn-biathlon" value="Biathlon" src="images/champion_img/disciplines/biathlon.png">
+                                <a>Biathlon</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-bobsleigh" value="Bobsleigh" src="images/champion_img/disciplines/bobsleigh.png">
+                            <a>Bobsleigh</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-combine" value="Combiné Nordique" src="images/champion_img/disciplines/combineNordique.png">
+                            <a>Combiné Nordique</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-hockey" value="Hockey sur Glace" src="images/champion_img/disciplines/hockey.png">
+                            <a>Hockey sur glace</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-luge" value="Luge" src="images/champion_img/disciplines/luge.png">
+                            <a>Luge</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-patinageArtistique" value="Patinage Artistique" src="images/champion_img/disciplines/patinageArtistique.png">
+                            <a>Patinage artistique</a>
+                            </div>
+                            
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-patinageVitesse" value="Patinage de vitesse" src="images/champion_img/disciplines/patinageDeVitesse.png">
+                            <a>Patinage de vitesse</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-sautASki" value="Saut à Ski" src="images/champion_img/disciplines/sautASki.png">
+                            <a>Saut à ski</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-skiAlpin" value="Ski Alpin" src="images/champion_img/disciplines/skiAlpin.png">
+                            <a>Ski alpin</a>
+                            </div>
+
+                            <div class="discipline">
+                            <input type="image" class="btn-discipline btn-skiDeFond" value="Ski de Fond" src="images/champion_img/disciplines/skiDeFond.png">
+                            <a>Ski de fond</a>
+                            </div>
+
+                        </div>
+
+                            <div id="biathlon" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="20kmHommes" name="discipline" value="20kmHommes">
+                                <label class="labelDiscipline" for="20kmHommes">20KM Hommes</label>
+                                </div>
+                                <div class="item_discipline">
+                                <input type="radio" id="relais4X7" name="discipline" value="relais4X7">
+                                <label class="labelDiscipline"for="relais4X7">Relais 4x7,5KM Hommes</label>
+                                </div>
+                            </div>
+
+                            <div id="bobsleigh" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="bobDeuxHommes" name="discipline" value="bobDeuxHommes">
+                                <label class="labelDiscipline" for="bobDeuxHommes">Bob à deux hommes</label class="labelDiscipline">
+                                </div>
+                                <div class="item_discipline">
+                                <input type="radio" id="bobQuatreHommes" name="discipline" value="bobQuatreHommes">
+                                <label class="labelDiscipline" for="bobQuatreHommes">Bob à quatre hommes</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                            <div id="combineNordique" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="combineIndividuelHommes" name="discipline" value="combineIndividuelHommes">
+                                <label class="labelDiscipline" for="combineIndividuelHommes">Combiné individuel hommes</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                            <div id="hockeySurGlace" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="Hommes" name="discipline" value="Hommes">
+                                <label class="labelDiscipline" for="Hommes">Hockey hommes</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                            <div id="luge" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="lugeSimpleHommes" name="discipline" value="lugeSimpleHommes">
+                                <label class="labelDiscipline" for="lugeSimpleHommes">Luge simple hommes</label class="labelDiscipline">
+                                </div>
+                                <div class="item_discipline">
+                                <input type="radio" id="lugeSimpleFemmes" name="discipline" value="lugeSimpleFemmes">
+                                <label class="labelDiscipline" for="lugeSimpleFemmes">Luge simple femmes</label class="labelDiscipline">
+                                </div>
+                                <div class="item_discipline">
+                                <input type="radio" id="lugeDoubleMixte" name="discipline" value="lugeDoubleMixte">
+                                <label class="labelDiscipline" for="lugeDoubleMixte">Luge double mixte</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                            <div id="patinageArtistique" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="individuelHommes" name="discipline" value="individuelHommes">
+                                <label class="labelDiscipline" for="individuelHommes">Patinage individuel hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="individuelFemmes" name="discipline" value="individuelFemmes">
+                                <label class="labelDiscipline" for="individuelFemmes">Patinage individuel femmes</label class="labelDiscipline">
+                                </div>
+                                <div class="item_discipline">
+                                <input type="radio" id="coupleMixte" name="discipline" value="coupleMixte">
+                                <label class="labelDiscipline" for="coupleMixte">Patinage en couple mixte</label>
+                                </div>
+                            </div>
+
+                            <div id="patinageVitesse" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="1500mHommes" name="discipline" value="1500mHommes">
+                                <label class="labelDiscipline" for="1500mHommes">Patinage en 1 500M hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="1000mFemmes" name="discipline" value="1000mFemmes">
+                                <label class="labelDiscipline" for="1000mFemmes">Patinage en 1 000M femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="5000mHommes" name="discipline" value="5000mHommes">
+                                <label class="labelDiscipline" for="5000mHommes">Patinage en 5 000M hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="3000mFemmes" name="discipline" value="3000mFemmes">
+                                <label class="labelDiscipline" for="3000mFemmes">Patinage en 3 000M femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="10000mHommes" name="discipline" value="10000mHommes">
+                                <label class="labelDiscipline" for="10000mHommes">Patinage en 10 000M hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="1500mFemmes" name="discipline" value="1500mFemmes">
+                                <label class="labelDiscipline" for="1500mFemmes">Patinage en 1 500M femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="500mHommes" name="discipline" value="500mHommes">
+                                <label class="labelDiscipline" for="500mHommes">Patinage en 500M hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="500mFemmes" name="discipline" value="500mFemmes">
+                                <label class="labelDiscipline" for="500mFemmes">Patinage en 500M femmes</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                            <div id="sautASki" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="grandTremplinIndividuelHommes" name="discipline" value="grandTremplinIndividuelHommes">
+                                <label class="labelDiscipline" for="grandTremplinIndividuelHommes">Grand tremplin individuel hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="tremplinNormalIndividuelHommes" name="discipline" value="tremplinNormalIndividuelHommes">
+                                <label class="labelDiscipline" for="tremplinNormalIndividuelHommes">Tremplin normal individuel hommes</label class="labelDiscipline">
+                                </div>
+
+                            </div>
+
+                            <div id="skiAlpin" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="descenteHommes" name="discipline" value="descenteHommes">
+                                <label class="labelDiscipline" for="descenteHommes">Descente hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="descenteFemmes" name="discipline" value="descenteFemmes">
+                                <label class="labelDiscipline" for="descenteFemmes">Descente femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="slalomHommes" name="discipline" value="slalomHommes">
+                                <label class="labelDiscipline" for="slalomHommes">Slalom hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="slalomFemmes" name="discipline" value="slalomFemmes">
+                                <label class="labelDiscipline" for="slalomFemmes">Slalom femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="slalomGeantHommes" name="discipline" value="slalomGeantHommes">
+                                <label class="labelDiscipline" for="slalomGeantHommes">Slalom géant hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="slalomGeantFemmes" name="discipline" value="slalomGeantFemmes">
+                                <label class="labelDiscipline" for="slalomGeantFemmes">Slalom géant femmes</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                            <div id="skiDeFond" class="affichage_discipline">
+                                <div class="item_discipline">
+                                <input type="radio" id="50kmHommes" name="discipline" value="50kmHommes">
+                                <label class="labelDiscipline" for="50kmHommes">50KM hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="relai3x5kmFemmes" name="discipline" value="relai3x5kmFemmes">
+                                <label class="labelDiscipline" for="relai3x5kmFemmes">Relais 3x5KM femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="relai4x10kmHommes" name="discipline" value="relai4x10kmHommes">
+                                <label class="labelDiscipline" for="relai4x10kmHommes">Relais 4x10KM hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="5kmFemmes" name="discipline" value="5kmFemmes">
+                                <label class="labelDiscipline" for="5kmFemmes">5KM femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="15kmHommes" name="discipline" value="15kmHommes">
+                                <label class="labelDiscipline" for="15kmHommes">15KM hommes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="10kmFemmes" name="discipline" value="10kmFemmes">
+                                <label class="labelDiscipline" for="10kmFemmes">10KM femmes</label class="labelDiscipline">
+                                </div>
+
+                                <div class="item_discipline">
+                                <input type="radio" id="30kmDepartGroupeHommes" name="discipline" value="30kmDepartGroupeHommes">
+                                <label class="labelDiscipline" for="30kmDepartGroupeHommes">30KM départ groupé hommes</label class="labelDiscipline">
+                                </div>
+                            </div>
+
+                    </div>
+
+
+                </div>
+
+                <input class="btn-r2-suivant bouton-droite" type="image" src="images/champion_img/fleche_blanche_droite.png">
+
+            </div>
+
+
+
+
+            <div id="troisiemeQuestion" class="etape">
+
+                <input class="btn-q3-retour bouton-gauche" type="image" src="images/champion_img/fleche_blanche_gauche.png">
+
+                <div class="contenu">
+
+                    <div clas="titre"><h1>Troisième question</h1></div>
+
+                    <div class="paragraphe"><a>Troisième texte de la question</a></div>
+
+                </div>
+
+                <input class="btn-q3-suivant bouton-droite" type="image" src="images/champion_img/fleche_blanche_droite.png">
+
+            </div>
+
+
+
+
+            <div id="troisiemeReponse" class="etape">
+
+                <div class="contenu">
+
+                    <input class="btn-r3-retour bouton-gauche" type="image" src="images/champion_img/fleche_blanche_gauche.png">
+
+                    <div class="titre"><h1>Troisième réponse</h1></div>
+
+                    <div class="paragraphe"><a>Troisième texte de la réponse</a></div>
+
+                    <div class="formReponse3">
+
+                        <div class="formPays" action="/action_page.php">
+
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Argentine" value="Argentine"><label id="ArgentineLabel" class="labelPays" for="Argentine"></label><a class="text-label-pays">Argentine</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Australie" value="Australie"><label id="AustralieLabel" class="labelPays" for="Australie"></label><a class="text-label-pays">Australie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Autriche" value="Autriche"><label id="AutricheLabel" class="labelPays" for="Autriche"></label><a class="text-label-pays">Autriche</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Bulgarie" value="Bulgarie"><label id="BulgarieLabel" class="labelPays" for="Bulgarie"></label><a class="text-label-pays">Bulgarie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Canada" value="Canada"><label id="CanadaLabel" class="labelPays" for="Canada"></label><a class="text-label-pays">Canada</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Chili" value="Chili"><label id="ChiliLabel" class="labelPays" for="Chili"></label><a class="text-label-pays">Chili</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="CoreeDuSud" value="CoreeDuSud"><label id="CoreeDuSudLabel" class="labelPays" for="CoreeDuSud"></label><a class="text-label-pays">Corée du Sud</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Danemark" value="Danemark"><label id="DanemarkLabel" class="labelPays" for="Danemark"></label><a class="text-label-pays">Danemark</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Espagne" value="Espagne"><label id="EspagneLabel" class="labelPays" for="Espagne"></label><a class="text-label-pays">Espagne</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="EtatsUnis" value="EtatsUnis"><label id="EtatsUnisLabel" class="labelPays" for="EtatsUnis"></label><a class="text-label-pays">États-Unis</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Finlande" value="Finlande"><label id="FinlandeLabel" class="labelPays" for="Finlande"></label><a class="text-label-pays">Finlande</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="France" value="France"><label id="FranceLabel" class="labelPays" for="France"></label><a class="text-label-pays">France</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="GrandeBretagne" value="GrandeBretagne"><label id="GrandeBretagneLabel" class="labelPays" for="GrandeBretagne"></label><a class="text-label-pays">Grande Bretagne</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Grece" value="Grece"><label id="GreceLabel" class="labelPays" for="Grece"></label><a class="text-label-pays">Grèce</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Hongrie" value="Hongrie"><label id="HongrieLabel" class="labelPays" for="Hongrie"></label><a class="text-label-pays">Hongrie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Inde" value="Inde"><label id="IndeLabel" class="labelPays" for="Inde"></label><a class="text-label-pays">Inde</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Iran" value="Iran"><label id="IranLabel" class="labelPays" for="Iran"></label><a class="text-label-pays">Iran</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Islande" value="Islande"><label id="IslandeLabel" class="labelPays" for="Islande"></label><a class="text-label-pays">Islande</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Italie" value="Italie"><label id="ItalieLabel" class="labelPays" for="Italie"></label><a class="text-label-pays">Italie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Japon" value="Japon"><label id="JaponLabel" class="labelPays" for="Japon"></label><a class="text-label-pays">Japon</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Liban" value="Liban"><label id="LibanLabel" class="labelPays" for="Liban"></label><a class="text-label-pays">Liban</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Liechtenstein" value="Liechtenstein"><label id="LiechtensteinLabel" class="labelPays" for="Liechtenstein"></label><a class="text-label-pays">Liechtenstein</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Maroc" value="Maroc"><label id="MarocLabel" class="labelPays" for="Maroc"></label><a class="text-label-pays">Maroc</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Mongolie" value="Mongolie"><label id="MongolieLabel" class="labelPays" for="Mongolie"></label><a class="text-label-pays">Mongolie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Norvege" value="Norvege"><label id="NorvegeLabel" class="labelPays" for="Norvege"></label><a class="text-label-pays">Norvège</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="NouvelleZelande" value="NouvelleZelande"><label id="NouvelleZelandeLabel" class="labelPays" for="NouvelleZelande"></label><a class="text-label-pays">Nouvelle Zélande</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="PaysBas" value="PaysBas"><label id="PaysBasLabel" class="labelPays" for="PaysBas"></label><a class="text-label-pays">Pays-Bas</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Pologne" value="Pologne"><label id="PologneLabel" class="labelPays" for="Pologne"></label><a class="text-label-pays">Pologne</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="AllemagneEst" value="AllemagneEst"><label id="AllemagneEstLabel" class="labelPays" for="AllemagneEst"></label><a class="text-label-pays">République Démocratique Allemande</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="AllemagneOuest" value="AllemagneOuest"><label id="AllemagneOuestLabel" class="labelPays" for="AllemagneOuest"></label><a class="text-label-pays">République Fédérale d'Allemagne</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Roumanie" value="Roumanie"><label id="RoumanieLabel" class="labelPays" for="Roumanie"></label><a class="text-label-pays">Roumanie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Suede" value="Suede"><label id="SuedeLabel" class="labelPays" for="Suede"></label><a class="text-label-pays">Suède</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Suisse" value="Suisse"><label id="SuisseLabel" class="labelPays" for="Suisse"></label><a class="text-label-pays">Suisse</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Tchecoslovaquie" value="Tchecoslovaquie"><label id="TchecoslovaquieLabel" class="labelPays" for="Tchecoslovaquie"></label><a class="text-label-pays">Tchécoslovaquie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Turquie" value="Turquie"><label id="TurquieLabel" class="labelPays" for="Turquie"></label><a class="text-label-pays">Turquie</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="UnionSovietique" value="UnionSovietique"><label id="UnionSovietiqueLabel" class="labelPays" for="UnionSovietique"></label><a class="text-label-pays">Union Soviétique</a></div>
+                            <div class="paysConteneur"><input type="radio" class="btn-pays" name="pays" id="Yougoslavie" value="Yougoslavie"><label id="YougoslavieLabel" class="labelPays" for="Yougoslavie"></label><a class="text-label-pays">Yougoslavie</a></div>             
+                    </div>
+
+
+                </div>
+
+                <input class="btn-r3-suivant bouton-droite" type="image" src="images/champion_img/fleche_blanche_droite.png">
+            
+            </div>
+        
+        </div>
+
+
+
+<!-- ECRAN DE RESULTATS -->
+            <div id="ecranResultat" class="etape">
+
+                <!-- <div class="barre_noire_haut"></div> -->
+                
+                <!-- DIV GENERALE -->
+            <div class="resultats_page1_colonnes">
+
+                <!-- COLONNE JOUEUR -->
+                <div class="colonne_infos_joueur">
+                    <div class="img_joueur"></div>
+                    <div class="texte_infos_joueur contenu_colonne"><a>VOTRE PROFIL</a></div>
+                    <div class="genre_joueur contenu_colonne"></div>
+                    <div class="discipline_joueur contenu_colonne"></div>
+                    <div class="pays_joueur contenu_colonne"></div>
+                    <div class="age_joueur contenu_colonne"></div>
+                    
+
+                </div>
+
+                <!-- COLONNE MEDAILLE -->
+                <div class="colonne_medaille_joueur">
+                   
+                    <div class="img_milieu contenu_colonne"><img src="images/champion_img/micro.png"></div>
+                    <div class="container_texte_milieu contenu_colonne"><a>« Quel podium ! Les athlètes sont tout sourire.<br>Le président du CIO s'avance avec les médailles.<br>La foule est en délire ! »</a></div>
+                    <div class="conteneur_medaille contenu_colonne"></div>
+                    <div class="dernier_texte_medaille contenu_colonne"></div>
+
+                </div>
+
+                <!-- COLONNE CHAMPION -->
+                <div class="colonne_champion">
+
+                    <div class="img_champion contenu_colonne"></div>
+                    <div class="nom_champion contenu_colonne"></div>
+                    <div class="age_champion contenu_colonne"></div>
+                    <div class="discipline_champion contenu_colonne"></div>
+                    <div class="pays_champion contenu_colonne"></div>
+
+                </div>   
+
+                
+            </div>
+
+            <button type="button" class="close btn-resultat-retour-menu" aria-label="Close" OnClick="window.location.href='index.html'">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <input type="image" class="btn-resultat-suivant" src="images/champion_img/fleche_blanche_bas.png">
+
+            </div>
+
+            <div id="ecranResultat2" class="etape">
+                
+                    <div class="resultats_page2_colonnes">
+
+                    <!-- COLONNE DISCIPLINE -->
+                    <div class="colonne-discipline">
+                        <div class="img-discipline"></div>
+                        <div class="titre-discipline"><a>LA DISCIPLINE</a></div>
+                        <div class="sous-titre-discipline"></div>
+                        <div class="texte_discipline"></div>
+                    </div>
+
+                    <!-- COLONNE DELEGATION -->
+                    <div class="colonne-delegation">
+                        <div class="img-delegation"></div>
+                        <div class="titre-delegation"><a>LA DÉLÉGATION</a></div>
+                        <div class="sous-titre-delegation"></div>
+                        <div class="texte_delegation"></div>
+                    </div>
+                    
+                    <!-- COLONNE CONTEXTE -->
+                    <div class="colonne-contexte">
+                        <div class="img-contexte"></div>
+                        <div class="titre-contexte"><a>LE CONTEXTE</a></div>
+                        <div class="sous-titre-contexte"></div>
+                        <div class="texte_contexte"></div>
+                    </div>    
+
+                </div>
+                
+                <input type="image" class="btn-resultat-retour" src="images/champion_img/fleche_blanche_haut.png">
+
+                <div class="btns-resultat2">
+                    
+                    <input class="btn-resultat-recommencer" type="button" value="Concourir à nouveau">
+
+                    <input class="btn-resultat-accueil" type="button" value="Recommencer">
+
+                </div>
+
+            </div>
+
+            <div class="barre_noire_bas"></div>
+
+        </div>
+    </body>
+</html>

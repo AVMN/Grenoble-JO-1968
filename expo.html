@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Visite 360°</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="fav.png" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	
+	<!-- BOUTON RETOUR -->
+	<div class="fermer">
+		<button type="button" class="close" aria-label="Close" OnClick="window.location.href='chalet.html'">
+			<img src="images/fermer.png"/>
+		</button>
+	</div>
+
+	<div id="intention">
+		<!-- VIDEO -->
+		<div class="txtIntro">
+			<p>Pour profiter pleinement de la vidéo 360° qui va suivre, maintenez le clic gauche enfoncé pour regarder autour de vous avec la souris.</p>
+		</div>
+
+		<!-- SUITE -->
+		<input class="btn btn-commencer btn-primary center" type="button" OnClick="$('#test').show().removeClass('hidden').addClass('animated fadeIn');$('#intention').addClass('hidden');" value="Commencer"/>
+	</div>
+
+
+	<div id="test" class="hidden">
+		<!-- VIDEO -->
+		
+		<h1 class="center">Une visite pour retracer les Jeux de Grenoble</h1>
+	
+	<!-- VIDEO -->
+	<iframe class="film" width="1000" height="562.5" src="https://player.vimeo.com/video/383534607" frameborder="0" allow="autoplay; fullscreen; gyroscope; accelerometer" allowfullscreen></iframe>
+	</div>
+
+
+
+	<!-- SCRIPTS -->
+	<script>
+    
+    jQuery(document).ready(function ($) {
+    	$('#test').hide();
+
+    	$('.btn-commencer').click(function () {
+        $('#intention').addClass('animated fadeOut');
+        $('#test').show().removeClass('hidden').addClass('animated fadeIn');
+	    }
+	});
+
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/browser.min.js"></script>
+	<script src="js/breakpoints.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/chalet.js"></script>
+	<script src="js/classie.js"></script>
+
+</body>
+</html>

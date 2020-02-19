@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Carte olympique temporelle</title>
+
+  <!-- Ici on charge nos fichiers CSS -->
+
+  <!-- D'abord le bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- La carte -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- Ensuite notre css, à la fin pour que nos modifications prennent le dessus -->
+  <link rel="stylesheet" href="css/style-carte.css">
+
+  <!-- Ici vous mettrez le code pour les analytics Google ou autre -->
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/4edf514e86/JO-68/style.css">
+
+</head>
+
+<body>
+
+  <div id="menu">
+	<div class="colo-5">
+		<a href="notice.html" data-target="#help" data-toggle='modal'> 
+			<img src="images/aide.png"/>
+		</a>
+	</div>
+	<h1 class="colo-90">CARTE OLYMPIQUE TEMPORELLE</h1>
+	<div class="colo-5">
+		<div class="fermer">
+    <button type="button" class="close" aria-label="Close" OnClick="window.location.href='chalet.html'">
+      <img src="images/fermer.png"/>
+    </button>
+  </div>
+	</div>
+</div>
+
+  <!-- La carte -->
+  <div id="map"></div>
+
+  
+    <!-- PALAIS DES SPORTS -->
+    <div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="modale1">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" id="palais">
+          <div class="modal-header">
+            <h5 class="modal-title">Palais des sports</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <!-- Past -->
+            <div class="past animated faster d-none">		  
+              <video controls autoplay width="770em">
+              <source src="images/parallax-palais.mp4">
+              </video>  
+            </div>
+
+            <!-- Image Comparison -->
+            <figure class="cd-image-container animated fadeIn">
+                <img src="images/slider-palais-apres.jpg" alt="Original Image">
+                <span class="cd-image-label" data-type="original">2019</span>
+  
+                <div class="cd-resize-img"> <!-- the resizable image on top -->
+                  <img src="images/slider-palais-avant.jpg" alt="Modified Image">
+                  <span class="cd-image-label" data-type="modified">1968</span>
+                </div>
+  
+                <span class="cd-handle"></span>
+              </figure> <!-- cd-image-container -->
+
+            <!-- Future -->
+            <div class="future animated faster d-none">
+                  <div class="row"> 
+                    <div class="col-6"> 
+                      <img src="images/future-palais.jpg" >
+                    </div>
+                    <div class="col-6"> 
+                      <h6>Que s'est-il passé ?</h6> 
+            <p>Une fois les jeux terminés, le palais des sports qui avait servi pour l’épreuve de patinage artistique perd son titre de Stade des glaces, mais il garde tout de même une place importante dans le patrimoine Isérois.</p>
+                      
+                      <h6>Comment l'équipement est-il utilisé aujourd'hui ?</h6> 
+            <p>Depuis, il a été réhabilité pour permettre d’accueillir régulièrement des évènements culturels et sportifs. </p>
+
+                     <h6>Et si nous poussions la reflexion plus loin ?</h6> 
+            <p> Même un bâtiment historique peut évoluer ! Le palais des sports pourrait devenir un des plus grands centres commerciaux de la métropole.</p>
+
+                    </div>
+                  </div>
+                  
+                  </div>
+          </div>
+		  
+		  
+		  
+          <div class="modal-footer">
+           <a id="past" href="#" class="btn btn-primary btn-md"  role="button" aria-pressed="true"><img class="float-right" src="images/avant-blanc.png"> Passé  </a>
+           <a id="back" href="#" class="btn btn-success btn-md d-none"  role="button" aria-pressed="true"> Retour </a>
+				  <a id="future" href="#" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Futur <img class="float-left" src="images/apres-blanc.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      
+
+ <!-- ANNEAU DE VITESSE -->
+    <div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="modale2">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Anneau de vitesse</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+		  
+            
+
+			<!-- Past -->
+            <div class="past animated faster d-none">		  
+              <video controls autoplay width="770em">
+              <source src="images/parallax-anneau.mp4">
+              </video>  
+            </div>
+
+			
+			<!-- Image Comparison -->
+            <figure class="cd-image-container animated fadeIn is-visible">
+              <img src="images/slider-anneau-apres.jpg" alt="Original Image">
+              <span class="cd-image-label" data-type="original">2019</span>
+
+              <div class="cd-resize-img"> <!-- the resizable image on top -->
+                <img src="images/slider-anneau-avant.jpg" alt="Modified Image">
+                <span class="cd-image-label" data-type="modified">1968</span>
+              </div>
+
+              <span class="cd-handle"></span>
+            </figure> <!-- cd-image-container -->
+			
+			
+			<!-- Future -->
+            <div class="future animated faster d-none">
+                  <div class="row"> 
+                    <div class="col-6"> 
+                      <img src="images/future-anneau.jpg" >
+                    </div>
+                    <div class="col-6"> 
+                      <h6>Que s'est-il passé ?</h6> 
+           <p>Depuis la fin des jeux, l’anneau de vitesse est un lieu emblématique du parc Paul Mistral à Grenoble. Il a longtemps été l’un des seuls anneaux de vitesses de France réglementaire pour les épreuves de vitesse.</p>
+                                
+                      <h6>Comment l'équipement est-il utilisé aujourd'hui ?</h6> 
+            <p>Des rassemblements sportifs et associatifs y sont régulièrement organisés, l’anneau pouvant accueillir plusieurs milliers de personnes. </p>
+			
+                      <h6>Et si nous poussions la reflexion plus loin ?</h6> 
+            <p>L’anneau de vitesse pourrait servir de stade pour de nouvelles disciplines : nous pouvons par exemple imaginer la mise en place d'un skate park.</p>
+
+                    </div>
+                  </div>
+                  
+                  </div>
+			
+          </div>
+          <div class="modal-footer">
+           <a id="past" href="#" class="btn btn-primary btn-md"  role="button" aria-pressed="true"><img class="float-right" src="images/avant-blanc.png"> Passé </a>
+           <a id="back" href="#" class="btn btn-success btn-md d-none"  role="button" aria-pressed="true"> Retour </a>
+				  <a id="future" href="#" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Futur <img class="float-left" src="images/apres-blanc.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+<!-- TREMPLIN DE SAINT NIZIER -->
+    <div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="modale3">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tremplin de Saint-Nizier</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           
+		    <!-- Past -->
+            <div class="past animated faster d-none">		  
+              <video class="video" controls autoplay width="770em">
+              <source src="images/parallax-tremplin.mp4">
+              </video>  
+            </div>
+			
+			<!-- Image Comparison -->
+            <figure class="cd-image-container">
+              <img src="images/slider-tremplin-apres.jpg" alt="Original Image">
+              <span class="cd-image-label" data-type="original">2019</span>
+
+              <div class="cd-resize-img"> <!-- the resizable image on top -->
+                <img src="images/slider-tremplin-avant.jpg" alt="Modified Image">
+                <span class="cd-image-label" data-type="modified">1968</span>
+              </div>
+
+              <span class="cd-handle"></span>
+            </figure> <!-- cd-image-container -->
+		   
+		   <!-- Future -->
+            <div class="future animated faster d-none">
+                  <div class="row"> 
+                    <div class="col-6"> 
+                      <img src="images/future-tremplin.jpg" >
+                    </div>
+                    <div class="col-6"> 
+                      <h6>Que s'est-il passé ?</h6> 
+           <p>Le tremplin n’a pas été entretenu après la fin des jeux. Il a aujourd'hui l'air complètement abandonné et la nature semble avoir repris ses droits. </p>
+           
+                      
+                      <h6>Comment l'équipement est-il utilisé aujourd'hui ?</h6> 
+           <p>Malgré son état, il est désormais au centre de l’attention : le groupe BB Brunes a tourné un clip vidéo en haut du tremplin, ce qui l'a beaucoup valorisé.
+		   Il est même question d'y organiser un festival sportif en 2020. </p>
+ 
+			
+                      <h6>Et si nous poussions la reflexion plus loin ?</h6> 
+            <p> Nous pouvons imaginer qu'à l'avenir, le tremplin soit réhabilité en un parc aquatique surplombant l'agglomération grenobloise, représentant ainsi un levier touristique. 
+			En effet, la vue extraordinaire qu'offre l'emplacement du tremplin pourrait en séduire plus d'un. </p>
+
+                    </div>
+                  </div>
+                  
+                  </div>
+		   
+		  </div>
+          <div class="modal-footer">
+           <a id="past" href="#" class="btn btn-primary btn-md"  role="button" aria-pressed="true"><img class="float-right" src="images/avant-blanc.png"> Passé </a>
+           <a id="back" href="#" class="btn btn-success btn-md d-none"  role="button" aria-pressed="true"> Retour </a>
+				  <a id="future" href="#" class="btn btn-secondary btn-md" role="button" aria-pressed="true"> Futur <img class="float-left" src="images/apres-blanc.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+<!-- ALPEXPO -->
+    <div class="modal bd-example-modal-xl" tabindex="-1" role="dialog" id="modale4">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Alpexpo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+		  
+		  
+		<!-- Past -->
+            <div class="past animated faster d-none">		  
+              <video controls autoplay width="770em">
+              <source src="images/parallax-alpexpo.mp4">
+              </video>  
+            </div>
+		  
+	
+            
+			 <!-- Image Comparison -->
+            <figure class="cd-image-container">
+              <img src="images/slider-alpexpo-apres.jpg" alt="Original Image">
+              <span class="cd-image-label" data-type="original">2019</span>
+
+              <div class="cd-resize-img"> <!-- the resizable image on top -->
+                <img src="images/slider-alpexpo-avant.jpg" alt="Modified Image">
+                <span class="cd-image-label" data-type="modified">1968</span>
+              </div>
+
+              <span class="cd-handle"></span>
+            </figure> <!-- cd-image-container -->
+			
+			
+			<!-- Future -->
+            <div class="future animated faster d-none">
+                  <div class="row"> 
+                    <div class="col-6"> 
+                      <img src="images/future-alpexpo.jpg" >
+                    </div>
+                    <div class="col-6"> 
+                      <h6>Que s'est-il passé ?</h6> 
+           <p>Après les Jeux, Alpexpo s’est transformé en centre d’exposition et de forums. 
+		   Il accueille désormais des salons scientifiques, des concerts, ou des évènements temporaires. </p>
+                                
+                      <h6>Comment l'équipement est-il utilisé aujourd'hui ?</h6> 
+            <p>Un des exemples de réutilisation de cet édifice est l'accueil de la délégation française pour célébrer les médailles remportées et les 50 ans des jeux d’hiver de Grenoble. </p>
+ 
+	                      <h6>Et si nous poussions la reflexion plus loin ?</h6> 
+            <p>En regardant loin dans l’avenir, une ancienne gare routière serait l’endroit parfait pour le futur spatioport de Grenoble !</p>
+
+                    </div>
+                  </div>
+                  
+                  </div>
+			
+          </div>
+          <div class="modal-footer">
+           <a id="past" href="#" class="btn btn-primary btn-md"  role="button" aria-pressed="true"><img class="float-right" src="images/avant-blanc.png"> Passé </a>
+           <a id="back" href="#" class="btn btn-success btn-md d-none"  role="button" aria-pressed="true"> Retour </a>
+				  <a id="future" href="#" class="btn btn-secondary btn-md" role="button" aria-pressed="true"> Futur <img class="float-left" src="images/apres-blanc.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- NOTICE -->
+    <div class="modal bd-example-modal-lg" tabindex="-1" role="dialog" id="help">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-black">
+          <div class="modal-header">
+            <h2 class="modal-title text-center">Notice d'utilisation</h2>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+		 <div class="modal-content">
+    
+       <div class="row">
+       
+         <div class="col-lg-6 col-12 text-center">
+          <img src="images/icone-tremplin.png" class="images-notice" />
+          <p>Pour visualiser <b>l'aperçu</b> d'un lieu emblématique, <b>cliquez</b> sur l'épingle correspondante, comme ci-dessus.</p> 
+        </div>
+
+        <div class="col-lg-6 col-12 text-center">
+          <img src="images/slider.png" class="images-notice" />
+            <p> Pour découvrir le <b>contenu</b> de l'épingle sélectionnée, cliquez sur <b>l'image</b> qui apparait dans la petite <b>fenêtre</b> au dessus.</p>
+        </div>
+
+        <div class="col-lg-6 col-12 text-center">
+          <img src="images/bouton-slider.png" class="images-notice" />
+          <p>Pour faire fonctionner le « slider » avant-après, <b>restez appuyé</b> sur ce <b>disque rouge</b>, puis faites-le <b>coulisser horizontalement</b>.</p>
+        </div>
+
+        <div class="col-lg-6 col-12 text-center">
+          <img src="images/button-close.png" class="images-notice" />
+          <p>Vous pouvez revenir en <b>arrière</b> à tout moment en cliquant n'importe où sur la <b>carte de fond</b> ou en cliquant sur la croix.</p>
+        </div>
+      </div>
+    </div>
+	
+  <!-- 
+  ICI ON CHARGE LES FICHIERS JAVASCRIPT
+  Attention l'ordre est très important :
+  Il faut d'abord charger les librairies et à la fin nos fichiers de code 
+  (qui utilisent donc les librairies chargées avant)
+  -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Make sure you put this AFTER Leaflet's CSS : le js qui s'occupe de la carte -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Notre js custom pour les marqueurs etc -->
+  <script src="js/carte.js"></script>
+
+  <!-- JS pour les images avant / après -->
+  <script src="js/image_comparison.js"></script> <!-- Resource jQuery -->
+
+</body>
+	
+</html>

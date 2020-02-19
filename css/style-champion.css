@@ -1,0 +1,566 @@
+body {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.boiboite {
+    position: relative;
+}
+
+:focus {
+    outline: none !important;
+}
+
+.etape {
+    position: absolute;
+    top: 4vh;
+    left: 0vh;
+    right: 0vh;
+    bottom: 4vh;
+    height: 92vh;
+}
+
+#accueil {
+    background-image: url(../images/champion_img/fond_accueil_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#premiereQuestion {
+    background-image: url(../images/champion_img/fond_profil_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#premiereReponse {
+    background-image: url(../images/champion_img/fond_profil_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#deuxiemeQuestion {
+    background-image: url(../images/champion_img/fond_disciplines_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#deuxiemeReponse {
+    background-image: url(../images/champion_img/fond_disciplines_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#troisiemeQuestion {
+    background-image: url(../images/champion_img/fond_pays_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+#troisiemeReponse {
+    background-image: url(../images/champion_img/fond_pays_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+.contenu {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.contenu h1 {
+    text-align: center;
+}
+
+.contenu .paragraphe {
+    text-align: center;
+}
+
+.formReponse1 {
+    height: 24em;
+}
+
+.formReponse2 {
+
+}
+
+.formReponse3 {
+    padding-top: 2em;
+}
+
+.btn-accueil {
+    cursor: pointer;
+    width: 8em;
+    height: 4em;
+    background-color: #A71A17;
+    border-style: solid;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.bouton-gauche, .bouton-droite {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 4em;
+    height: 4em;
+}
+
+.bouton-gauche {
+    left: 0;
+}
+
+.bouton-droite {
+    right: 0;
+}
+
+.bouton-milieu {
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+
+.btns-resultat2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn-resultat-retour-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btn-resultat-retour {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2em;
+    height: 2em;
+}
+
+.btn-resultat-suivant {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 2em;
+    height: 2em;
+}
+
+.formGenre {
+    display: flex;
+    flex-direction: row;
+}
+
+.formAge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.formDiscipline {
+    
+}
+
+.labelGenre {
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width: 10rem;
+    height: 10rem;
+}
+
+.item_genre {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.item_genre input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.formGenre input:active + .labelGenre {
+    -webkit-filter: none; -moz-filter: none; filter: none;
+}
+
+.formGenre input:checked + .labelGenre {
+    opacity: 0.3;
+}
+
+#age {
+    height: 3rem;
+    width: 12rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sports {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 40vh;
+    justify-content: flex-start;
+    padding-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.discipline {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 7em;
+    align-items: center;
+}
+
+.discipline a{
+    display: inline;
+}
+
+.container_texte_discipline {
+    text-align: center;
+}
+
+.btn-discipline {
+    width: 6em;
+    height: 6em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-style: solid;
+    border-radius: 100%;
+    border-color: #333333;
+    border-width: 0.2em;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-filter: none; -moz-filter: none; filter: none;
+}
+
+.discipline input[type="image"]:focus{
+    opacity: 0.7;
+}
+
+.discipline input {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.affichage_discipline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding-top: 1em;
+    height: 30vh;
+
+}
+
+.item_discipline {
+    margin-left: 0.7em;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.labelDiscipline {
+    cursor:pointer;
+    background-size:contain;
+    width: 8em;
+    height: 4em;
+    background-color: #1A345A;
+    border-style: solid;
+    border-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.affichage_discipline input {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.affichage_discipline input:active + .labelDiscipline {
+    -webkit-filter: none; -moz-filter: none; filter: none;
+}
+
+.affichage_discipline input:checked + .labelDiscipline {
+    background-color: #A71A17;
+}
+
+.formPays {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 69.5vh;
+    justify-content: flex-start;
+}
+
+.formPays input:active + .labelPays {
+    -webkit-filter: none; -moz-filter: none; filter: none;
+}
+
+.formPays input:checked + .labelPays {
+    opacity: 0.3;
+}
+
+.formPays input {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+.labelPays {
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width: 5em;
+    height: 5em;
+}
+
+.paysConteneur {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5em;
+    width: 7em;
+}
+
+.text-label-pays {
+    display: inline;
+}
+
+.resultats_page1_colonnes {
+    display: flex;
+    background-image: url(../images/champion_img/fond_resultatfemme_desat.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    width: 100%;
+}
+
+.colonne_infos_joueur {
+    height: 92vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.185);
+    overflow: auto;
+}
+
+.colonne_medaille_joueur {
+    flex: 1;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.colonne_champion {
+    flex: 1;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.185);
+    overflow: auto;
+}
+
+.resultats_page2_colonnes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 92vh;
+    background-image: url(../images/champion_img/fond_resultat_homme_desat.jpg);
+    background-size: 100% 100%;
+}
+
+.colonne-discipline {
+    flex: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    margin-top: 3em;
+    text-align: left;
+}
+
+.colonne-delegation {
+    flex: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.colonne-contexte {
+    flex: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    margin-top: 3em;
+    text-align: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.img_milieu {
+    height: 6rem;
+    width: 6rem;
+    margin-top: 1em;
+}
+
+.container_texte_milieu {
+    text-align: center;
+}
+
+.container_texte_milieu a {
+    display: inline-block;
+}
+
+.dernier_texte_medaille {
+    text-align: center;
+    padding: 1em;
+}
+
+.contenu_colonne {
+    text-align: center;
+    flex: 1;
+}
+
+.img_object {
+    width: 8em;
+    height: 8em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.drapeau_resultat {
+    height: 100%;
+    width: 100%;
+}
+
+.pays_champion {
+    height: 5em;
+    width: 5em;
+    margin-bottom: 2em;
+}
+
+.titre-discipline, .titre-delegation, .titre-contexte {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #A71A17;
+}
+
+.texte_discipline, .texte_delegation, .texte_contexte {
+    margin-top: 2em;
+}
+
+.barre_noire_haut {
+    background-color: black;
+    height: 4vh;
+    width: 100%;
+    display: block;
+}
+
+.barre_noire_bas {
+    background-color: black;
+    height: 4vh;
+    width: 100%;
+    display: block;
+}
+
+#genre_homme_label {background-image: url(../images/champion_img/avatar/Homme.png);box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#genre_femme_label {background-image: url(../images/champion_img/avatar/Femme.png);box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+
+#AllemagneEstLabel {background-image: url(../images/champion_img/drapeaux/AllemagneEst.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#AllemagneOuestLabel {background-image: url(../images/champion_img/drapeaux/AllemagneOuest.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#ArgentineLabel {background-image: url(../images/champion_img/drapeaux/Argentine.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#AustralieLabel {background-image: url(../images/champion_img/drapeaux/Australie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#AutricheLabel {background-image: url(../images/champion_img/drapeaux/Autriche.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#BulgarieLabel {background-image: url(../images/champion_img/drapeaux/Bulgarie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#CanadaLabel {background-image: url(../images/champion_img/drapeaux/Canada.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#ChiliLabel {background-image: url(../images/champion_img/drapeaux/Chili.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#CoreeDuSudLabel {background-image: url(../images/champion_img/drapeaux/CoreeDuSud.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#DanemarkLabel {background-image: url(../images/champion_img/drapeaux/Danemark.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#EspagneLabel {background-image: url(../images/champion_img/drapeaux/Espagne.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#EtatsUnisLabel {background-image: url(../images/champion_img/drapeaux/EtatsUnis.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#FinlandeLabel {background-image: url(../images/champion_img/drapeaux/Finlande.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#FranceLabel {background-image: url(../images/champion_img/drapeaux/France.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#GrandeBretagneLabel {background-image: url(../images/champion_img/drapeaux/GrandeBretagne.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#GreceLabel {background-image: url(../images/champion_img/drapeaux/Grece.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#HongrieLabel {background-image: url(../images/champion_img/drapeaux/Hongrie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#IndeLabel {background-image: url(../images/champion_img/drapeaux/Inde.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#IranLabel {background-image: url(../images/champion_img/drapeaux/Iran.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#IslandeLabel {background-image: url(../images/champion_img/drapeaux/Islande.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#ItalieLabel {background-image: url(../images/champion_img/drapeaux/Italie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#JaponLabel {background-image: url(../images/champion_img/drapeaux/Japon.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#LibanLabel {background-image: url(../images/champion_img/drapeaux/Liban.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#LiechtensteinLabel {background-image: url(../images/champion_img/drapeaux/Liechtenstein.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#MarocLabel {background-image: url(../images/champion_img/drapeaux/Maroc.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#MongolieLabel {background-image: url(../images/champion_img/drapeaux/Mongolie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#NorvegeLabel {background-image: url(../images/champion_img/drapeaux/Norvege.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#NouvelleZelandeLabel {background-image: url(../images/champion_img/drapeaux/NouvelleZelande.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#PaysBasLabel {background-image: url(../images/champion_img/drapeaux/PaysBas.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#PologneLabel {background-image: url(../images/champion_img/drapeaux/Pologne.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#RoumanieLabel {background-image: url(../images/champion_img/drapeaux/Roumanie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#SuedeLabel {background-image: url(../images/champion_img/drapeaux/Suede.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#SuisseLabel {background-image: url(../images/champion_img/drapeaux/Suisse.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#TchecoslovaquieLabel {background-image: url(../images/champion_img/drapeaux/Tchecoslovaquie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#TurquieLabel {background-image: url(../images/champion_img/drapeaux/Turquie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#UnionSovietiqueLabel {background-image: url(../images/champion_img/drapeaux/UnionSovietique.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}
+#YougoslavieLabel {background-image: url(../images/champion_img/drapeaux/Yougoslavie.png); box-shadow: inset 0 0 0 0.2em #333333; border-radius: 100%;}

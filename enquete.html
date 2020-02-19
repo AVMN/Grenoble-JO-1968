@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>En quête d'archives</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" type="image/png" href="fav.png" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styleTEST.css">
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+
+	<!-- BOUTON RETOUR -->
+	<div class="fermer">
+		<button type="button" class="close" aria-label="Close" OnClick="window.location.href='chalet.html'">
+			<img src="images/fermer.png"/>
+		</button>
+	</div>
+
+	<div id="intention">
+		<h1 class="center">En quête d'archives</h1>
+		<div class="txtIntro">
+			<p>Que sont devenus le tremplin de Saint Nizier, le palais des sports et l'anneau de vitesse ? Découvrez le dans ces trois documentaires, en cliquant sur leur titre ou leur vignette pour lancer les épisodes.</p>
+		</div>
+
+		<!-- SUITE -->
+		<input class="btn btn-commencer btn-primary center" type="button" OnClick="$('#test').show().removeClass('hidden').addClass('animated fadeIn');$('#intention').addClass('hidden');" value="Voir les documentaires"/>
+	</div>
+
+
+	<div id="test" class="hidden">
+		
+	<div class="container-fluid"> 
+		<div class="row">
+		
+			<div id="clic" class="col-lg-4"><h2 class="center">Le Tremplin de Saint Nizier</h1><img class="logo" src="images/mini_tremplin.png"/>
+			
+				<div class="row content hidden"> <!-- Colonne Clic : row de trois colonnes (bootstrap), à rajouter en php un "echo" pour appeler le contenu dans les colonnes-->
+					<div class="col-lg-1"></div>
+					<div class="col-lg-9">
+						<div class="rel-img">
+							<!-- VIDEO -->
+							<video class="film" width="1000" height="562.5" controls>
+								<source src="videos/tremplin.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="and" class="col-lg-4"><h2 class="center">Le Palais des Sports</h1><img class="logo" src="images/mini_palais.jpg"/>
+			
+				<div class="row content hidden"> <!-- Colonne Clic : row de trois colonnes (bootstrap), à rajouter en php un "echo" pour appeler le contenu dans les colonnes-->
+					<div class="col-lg-1"></div>
+					<div class="col-lg-9">
+						<div class="rel-img">
+							<!-- VIDEO -->
+							<video class="film" width="1000" height="562.5" controls>
+								<source src="videos/palais.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+			
+			<div id="clap" class="col-lg-4"><h2 class="center">L’anneau de vitesse</h1><img class="logo" src="images/mini_ano.jpg"/>
+			
+				<div class="row content hidden"> <!-- Colonne Clic : row de trois colonnes (bootstrap), à rajouter en php un "echo" pour appeler le contenu dans les colonnes-->
+					<div class="col-lg-1"></div>
+					<div class="col-lg-9">
+						<div class="rel-img">
+							<!-- VIDEO -->
+							<video class="film" width="1000" height="562.5" controls>
+								<source src="videos/anodevitess.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	</div>
+
+
+
+	<!-- SCRIPTS -->
+	<script>
+    
+    jQuery(document).ready(function ($) {
+    	$('#test').hide();
+
+    	$('.btn-commencer').click(function () {
+        $('#intention').addClass('animated fadeOut');
+        $('#test').show().removeClass('hidden').addClass('animated fadeIn');
+	    }
+	});
+
+	</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+// 
+
+	$("#clic").click(function(){
+		
+		$("#and h1,#clap h1").addClass("rotate"); //*Fait tourner les titres des deux autres colonnes*//
+		$("#clic, #and, #clap").find(".logo").addClass("hidden");//*Cache les logos*//
+		$(this).find(".content").removeClass("hidden");//*Affiche le contenu*//
+		$("#and, #clap").find(".content").addClass("hidden");//*cache le contenu des deux autres colonnes*//
+		$(this).find("h1").removeClass("rotate");//*remet le titre de la colonne droit*//
+		$("#clic").removeClass().addClass('col-lg-10');//*Agrandi la colonne*//
+		$("#and,#clap").removeClass().addClass('col-lg-1');//*rétréci les deux autres colonnes*//
+		
+		
+	});
+	
+	$("#and").click(function(){
+		
+		$("#clic h1,#clap h1").addClass("rotate");
+		$("#clic, #and, #clap").find(".logo").addClass("hidden");
+		$("#and").find(".content").removeClass("hidden");
+		$("#clic, #clap").find(".content").addClass("hidden");
+		$(this).find("h1").removeClass("rotate");
+		$("#clic,#clap").removeClass().addClass('col-lg-1');
+		$("#and").removeClass().addClass('col-lg-10');
+	});
+	
+
+	$("#clap").click(function(){
+		
+		$("#and h1,#clic h1").addClass("rotate");
+		$("#clic, #and, #clap").find(".logo").addClass("hidden");
+		$("#clap").find(".content").toggleClass("hidden");
+		$("#clic, #and").find(".content").addClass("hidden");
+		$(this).find("h1").removeClass("rotate");
+		$("#and,#clic").removeClass().addClass('col-lg-1');
+		$("#clap").removeClass().addClass('col-lg-10');
+	});
+
+});</script>
+
+	<!-- SCRIPTS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/browser.min.js"></script>
+	<script src="js/breakpoints.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/chalet.js"></script>
+	<script src="js/classie.js"></script>
+
+</body>
+</html>
